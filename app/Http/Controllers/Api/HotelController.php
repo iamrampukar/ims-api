@@ -14,7 +14,8 @@ class HotelController extends Controller
      */
     public function index()
     {
-        //
+        $model = Hotel::get();
+        return $this->sendResponse(['data' => $model]);
     }
 
     /**
